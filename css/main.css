@@ -1,0 +1,297 @@
+/* BODY */
+
+* {
+	box-sizing: border-box;
+}
+
+body, html, #weather {
+	height: 100%;
+}
+
+body {
+	font-family: 'Nunito', sans-serif;
+}
+
+.background {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+}
+
+/* HEADER */
+
+.header {
+	height: 10%;
+}
+
+.name {
+	position: absolute;
+	transform: translateY(-50%);
+	top: 7.5%;
+	left: 10%;
+	z-index: 3;
+}
+
+.name h1 {
+	font-family: 'Oleo Script';
+	font-size: 5vh;
+	color: #fff;
+}
+
+/* NAV */
+
+body nav {
+	position: absolute;
+	transform: translateY(-50%);
+	top: 7.5%;
+	right: 10%;
+	z-index: 3;
+}
+
+body nav .fa {
+	color: #fff;
+	font-size: 3vh;
+} 
+
+/* SETTINGS */
+
+.settings {
+	background-image: url(../img/aurora.svg);
+	background-size: cover;
+	background-repeat: none;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+	opacity: 0;
+}
+
+.settings .upper {
+	height: 60%;
+}
+
+.settings label {
+	position: absolute;
+	transform: translate(-50%,-50%);
+	top: 25%;
+	left: 50%;
+	color: #fff;
+	font-size: 7vh;
+	font-weight: 600;
+}
+
+.settings input {
+	position: absolute;
+	transform: translate(-50%,-50%);
+	top: 42.5%;
+	left: 50%;
+	width: 80%;
+	padding: 0 5%;
+	border-style: none;
+	border-radius: 5px;
+	background-color: #fff;
+	color: #ccc;
+	font-weight: 200;
+	font-size: 4vh;
+	text-align: center;
+	z-index: 3
+}
+
+.settings .lower {
+	position: absolute;
+	bottom: 0%;
+	width: 100%;
+	height: 40.5%;
+	border-style: none;
+	background-color: #fff;
+	font-size: 5vh;
+	font-weight: 200;
+}
+
+.settings button {
+	position: absolute;
+	transform: translateX(-50%);
+	bottom: 37.5%;
+	left: 50%;
+	padding: .5rem 4rem;
+	border-radius: 50px;
+	border-style: none;
+	background-color: #65C8B2;
+	color: #fff;
+}
+
+/* MAIN */
+
+main {
+	height: 90%;
+}
+
+/* TOP */
+
+.top {
+	position: relative;
+	transform: translateY(-50%);
+	top: 29%;
+	overflow: hidden;
+	height: 55%;
+	padding: 0 10%;
+	font-size: 1.5vh;
+	color: #fff;
+	text-align: center;
+}
+
+.first-block {
+	height: 25%;
+	overflow: hidden;
+}
+
+.wdata-01 {
+	font-weight: 200;
+}
+
+.wdata-02 {
+	font-weight: 600;
+	font-size: 4vh;
+	line-height: .25;
+	text-transform: uppercase;
+}
+
+.second-block {
+	height: 40%;
+	overflow: hidden;
+}
+
+.wdata-03 {
+	font-size: 23vh;
+	line-height: 1;
+	padding: 50% 0;
+}
+
+.wdata-04 {
+	font-weight: 800;
+	font-size: 10vh;
+	float: right;
+	width: 50%;
+	margin: 0;
+	line-height: 2;
+}
+
+.third-block {
+	height: 20%;
+	overflow: hidden;
+}
+
+
+.wdata-05 {
+	font-weight: 200;
+	font-size: 3.5vh;
+}
+
+/* BOTTOM */
+
+.bottom {
+	position: relative;
+	overflow: hidden;
+	height: 45%;
+	width: 100%;
+	background-color: #fff;
+}
+
+.one, .two, .three {
+	float: left;
+	width: 100%;
+	height: 33.3333%;
+	border-bottom: solid 1px #eee;
+}
+
+.bottom h1 {
+	transform: translateY(-100%);
+	position: relative;
+	top: 50%;
+	font-size: 2.5vh;
+	font-weight: 600;
+}
+
+.wdata-08, .wdata-11, .wdata-14 {
+	float: left;
+	width: 25%;
+	padding: 0 10%;
+	color: #404040;
+	text-transform: uppercase;
+}
+
+.wdata-09, .wdata-12, .wdata-15 {
+	float: left;
+	width: 50%;
+	position: relative;
+	transform: translateY(-50%);
+	top: 50%;
+	right: 5%;
+	text-align: right;
+	color: #ccc;
+	font-size: 7vh;
+}
+
+.wdata-10, .wdata-13, .wdata-16 {
+	float: left;
+	width: 25%;
+	padding-right: 10%;
+	text-align: right;
+	color: #404040;
+}
+
+/* ANIMATION */
+
+.top {
+	animation: fadein 1s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+.wdata-08, .wdata-09, .wdata-10 {
+	animation: fadein 1s;
+	animation-fill-mode: forwards;
+	animation-delay: .5s;
+	opacity: 0;
+}
+
+.wdata-11, .wdata-12, .wdata-13 {
+	animation: fadein 1s;
+	animation-fill-mode: forwards;
+	animation-delay: 1s;
+	opacity: 0;
+}
+
+.wdata-14, .wdata-15, .wdata-16 {
+	animation: fadein 1s;
+	animation-fill-mode: forwards;
+	animation-delay: 1.5s;
+	opacity: 0;
+}
+
+/* JAVASCRIPT */
+
+.js-hide {
+	display: none;
+}
+
+.js-fadein {
+	animation: fadein 1s;
+	animation-fill-mode: forwards;
+}
+
+.js-fadeout {
+	animation: fadeout 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes fadeout {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
